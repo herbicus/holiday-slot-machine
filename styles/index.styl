@@ -1,0 +1,61 @@
+// -------------------------------------
+//   index.styl
+// -------------------------------------
+// ----- Contains an import section for libs, core, and modules, the inbox,
+// ----- and a shame section for quick fixes and hacks ----- //
+
+// -------------------------------------
+//   Libs
+// -------------------------------------
+
+//@import 'nib'
+@import 'vendor/normalize.css'
+@import 'vendor/flex-layout.css'
+
+// -------------------------------------
+//   Core
+// -------------------------------------
+
+// ----- Layout - Margin, Padding, Sizing, etc.. ----- //
+@import 'base'
+@import 'components/settings'
+@import 'components/utilities'
+
+// ----- Site ----- //
+@import 'components/header'
+@import 'components/nav'
+@import 'components/home'
+@import 'components/greeting-mobile'
+@import 'components/greeting'
+@import 'components/loader'
+
+// -------------------------------------
+//   Inbox
+// -------------------------------------
+// ----- The inbox allows to quickly add styles
+// ----- that are easily seen by everybody else
+// -------------------------------------
+
+// for demo
+img
+	width 100%
+	max-width 100% 
+	height auto
+	position relative
+	left 50%
+	-webkit-transform translateX(-50%)
+	-moz-transform translateX(-50%)
+	-ms-transform translateX(-50%)
+	-o-transform translateX(-50%)
+	transform translateX(-50%)
+	
+	@media $mobile
+		max-width 500px 
+
+
+// -------------------------------------
+//   Shame
+// -------------------------------------
+// ----- Need to add a quick fix, hack, or questionable technique?
+// ----- Add it here, fix it later.
+// -------------------------------------

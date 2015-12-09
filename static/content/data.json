@@ -1,0 +1,7 @@
+{
+  "data":
+    {
+      "greeting": ["Happy Holidays", "Merry Christmas", "Happy X-Mas", "Yule Time Cheer", "Yon Kippur", "Seasons Greetings", "X-Mas Time"],
+      "icons": ["https://placekitten.com/g/500/500", "https://placekitten.com/g/700/500"]
+    }
+}
