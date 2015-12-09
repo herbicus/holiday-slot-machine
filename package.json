@@ -60,7 +60,9 @@
     "node": ">=0.10.0"
   },
   "browserify-shim": {
-    "math": "global:Math"
+    "math": "global:Math",
+    "TweenMax": "global:TweenMax",
+    "Draggable": "global:Draggable"
   },
   "browserify": {
     "transform": [

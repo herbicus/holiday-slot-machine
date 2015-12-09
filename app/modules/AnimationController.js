@@ -1,7 +1,8 @@
 'use strict';
 
 var TweenMax = require('../vendor/gsap/TweenMax');
-// var Draggable = require('../vendor/gsap/Draggable');
+var Draggable = require('../vendor/gsap/utils/Draggable');
+var throwProps = require('../vendor/gsap/utils/throwPropsPlugin.min');
 
 module.exports = function() {
 
@@ -32,11 +33,10 @@ module.exports = function() {
   this.leverAnimation = function(element, container) {
     this.element = element;
 
-    TweenMax.set(element, {y: -100});
+    TweenMax.set(element, {y: -175, x: -40});
 
     Draggable.create(element, {
-      type:"y",
-      bounds: container,
+      type:'y',
       throwProps: true,
       cursor: '-webkit-grab', /* set initial cursor to grab */
       onDragStart:function(){
@@ -45,11 +45,14 @@ module.exports = function() {
       onDragEnd:function() {
         console.log("lever pulled");
         TweenMax.to(element, 0.5, {
-          y: -100,
+          y: -175,
           ease: Back.easeOut
         });
+        window.location.href='#greeting';
       }
     });
+
+
   }
 
 };

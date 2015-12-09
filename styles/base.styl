@@ -94,7 +94,13 @@ canvas
   background green 
   box-shadow -1px 5px 5px rgba(0,0,0,0.5)
   
-  a
+  .lever-container
+    position relative
+    height 500px
+    border 1px solid red
+
+  a,
+  #lever
     position absolute
     top 75%
     left 75%
@@ -104,9 +110,11 @@ canvas
     -ms-transform translate(-50%, -50%)
     -o-transform translate(-50%, -50%)
     transform translate(-50%, -50%)
-    // background url("../images/slots-lever.png")no-repeat center center
-    // -webkit-background-size contain 
-    // -o-background-size contain 
-    // background-size contain
-    // width 92px
-    // height 523px  
+    background url("../images/slots-lever.png")no-repeat center center
+    -webkit-background-size contain 
+    -o-background-size contain 
+    background-size contain
+    width 92px
+    height 400px
+    text-indent -9999px
+    transform-origin center bottom
