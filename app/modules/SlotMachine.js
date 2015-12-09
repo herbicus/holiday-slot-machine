@@ -59,7 +59,9 @@ module.exports = function() {
 
     // images to mask
     // this.graphic(stage);
-    this.drawLever(stage);
+    
+    //this.drawLever(stage);
+    
     //this.leverHitarea(stage);
 
     animate();
