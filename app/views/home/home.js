@@ -20,12 +20,12 @@ var Home = Backbone.View.extend({
   leverPull: function() {
   	//var tl = new TimelineMax({paused: true});
 
-  	if (this.model.get('mobile') === false) {
-      TweenMax.to('canvas', 0.5, {
-        bottom: '-20%',
-        ease: Power2.easeOut
-      });
-    }
+  	// if (this.model.get('mobile') === false) {
+   //    TweenMax.to('canvas', 0.5, {
+   //      bottom: '-20%',
+   //      ease: Power2.easeOut
+   //    });
+   //  }
 
   	// if($('canvas').hasClass('pulled')) {
   	// 	tl.reverse();

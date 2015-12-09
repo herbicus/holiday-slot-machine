@@ -139,31 +139,31 @@ var Update = Backbone.View.extend({
     }
 
     console.log('clicked jq');
-    TweenMax.to(this.spriteLever, 0.5, {
-        yoyo: true,
-        repeat: -1,
-        y: 40,
-        ease: Back.easeInOut
-    });
+    // TweenMax.to(this.spriteLever, 0.5, {
+    //     yoyo: true,
+    //     repeat: -1,
+    //     y: 40,
+    //     ease: Back.easeInOut
+    // });
 
   },
 
   hide: function() {
     this.animate.animateOut(this.el);
-    TweenMax.to(this.el, {
-      bottom: 0,
-      ease: Power4.easeOut
-    });
+    // TweenMax.to(this.el, {
+    //   bottom: 0,
+    //   ease: Power4.easeOut
+    // });
     // this.shffuleConent();
   },
 
   show: function() {
 
     this.animate.animateIn(this.el);
-    TweenMax.to(this.el, {
-      bottom: '-10%',
-      ease: Power4.easeOut
-    });
+    // TweenMax.to(this.el, {
+    //   bottom: '-10%',
+    //   ease: Power4.easeOut
+    // });
     // this.shffuleConent();
   },
 
