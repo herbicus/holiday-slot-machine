@@ -28,8 +28,6 @@ var Update = Backbone.View.extend({
     };
     //var content = this.model.get('data');
 
-    
-
     // console.log(this.newData);
     // console.log(this.newImg);
 
