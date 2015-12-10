@@ -93,8 +93,8 @@ var Update = Backbone.View.extend({
 
   initialize: function() {
 
-    this.slotMachine = new SlotMachine();
-    this.slotMachine.init();   
+    // this.slotMachine = new SlotMachine();
+    // this.slotMachine.init();   
     
     // underscore
     var content = {
