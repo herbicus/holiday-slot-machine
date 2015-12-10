@@ -31,10 +31,14 @@ $desktop = "screen and (min-width: 960px)"
   -webkit-box-sizing border-box
   -moz-box-sizing border-box
   box-sizing border-box
-
+  
+html,
 body
   width 100%
-  background green 
+  height 100%
+
+body
+  background green
 
 main
   position fixed
@@ -42,6 +46,7 @@ main
   left 0
   right 0
   bottom 0
+  overflow hidden
 
 section
   position absolute
@@ -49,72 +54,16 @@ section
   height 100%
   overflow auto
   
-canvas
-  position absolute
-  bottom 0
-  left 50%
-  -webkit-transform translateX(-50%)
-  -moz-transform translateX(-50%)
-  -ms-transform translateX(-50%)
-  -o-transform translateX(-50%)
-  transform translateX(-50%)
-  width 100%
-  max-width 850px
-  height auto
-  margin 0 auto
-  
-  // @media screen and (min-width: 960px)
-  //   bottom 0
-  
-  // @media $desktop
-  //   top 50px
-      
-.l-section-container
-  // width 100%
-  // max-width 960px
-  //min-height 100vh
-  // margin 0 auto
-  // background rgba($goBlue, 0.15)
-    
-#about,
-#update,
-#contact
-  //max-height 10vh
-  .l-section-container
-    //min-height 50vh
-    z-index -1 
-    
-.greeting-container
-  height 200px
-  background red
-  // -webkit-box-shadow 1px 5px 10px rbga($black, 0.5) 
-  // box-shadow 1px 5px 10px rbga($black, 0.5)
-  
-#home
-  background green 
-  box-shadow -1px 5px 5px rgba(0,0,0,0.5)
-  
-  .lever-container
-    position relative
-    height 500px
-    border 1px solid red
-
-  a,
-  #lever
-    position absolute
-    top 75%
-    left 75%
-    z-index 5 
-    -webkit-transform translate(-50%, -50%)
-    -moz-transform translate(-50%, -50%)
-    -ms-transform translate(-50%, -50%)
-    -o-transform translate(-50%, -50%)
-    transform translate(-50%, -50%)
-    background url("../images/slots-lever.png")no-repeat center center
-    -webkit-background-size contain 
-    -o-background-size contain 
-    background-size contain
-    width 92px
-    height 400px
-    text-indent -9999px
-    transform-origin center bottom
+// canvas
+//   position absolute
+//   bottom 0
+//   left 50%
+//   -webkit-transform translateX(-50%)
+//   -moz-transform translateX(-50%)
+//   -ms-transform translateX(-50%)
+//   -o-transform translateX(-50%)
+//   transform translateX(-50%)
+//   width 100%
+//   max-width 850px
+//   height auto
+//   margin 0 auto

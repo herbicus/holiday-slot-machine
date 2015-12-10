@@ -3,6 +3,7 @@
 	max-width 700px
 	margin 0 auto
 	padding 0 25px
+	position relative
 	
 .hero-title-holder	
 	text-align center
@@ -18,3 +19,48 @@
 	height 100%
 	min-height 100px
 	color $white
+	
+.slots-container
+	position relative
+	width 100%
+	max-width 700px
+	margin 0 auto
+	
+#lever
+	position absolute
+	top 75%
+	left 75%
+	left 105%
+	z-index 100
+	display inline-block
+	-webkit-transform translate(-50%, -50%)
+	-moz-transform translate(-50%, -50%)
+	-ms-transform translate(-50%, -50%)
+	-o-transform translate(-50%, -50%)
+	transform translate(-50%, -50%)
+	-webkit-background-size contain 
+	-o-background-size contain 
+	background-size contain
+	width 92px
+	text-indent -9999px
+	transform-origin center bottom
+	
+.inline-slots
+	position absolute
+	top 63%
+	left 50%
+	width 100%
+	max-width 150px
+	-webkit-transform translate(-50%, -50%)
+	-moz-transform translate(-50%, -50%)
+	-ms-transform translate(-50%, -50%)
+	-o-transform translate(-50%, -50%)
+	transform translate(-50%, -50%)
+	visibility hidden
+	
+.slot-left
+	left 22%
+	
+.slot-right
+	left 78%
+	

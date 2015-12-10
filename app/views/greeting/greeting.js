@@ -5,9 +5,8 @@ var _ = require('underscore');
 var Backbone = require('backbone');
 var template = require('./greeting.html');
 var AnimationController = require('../../modules/AnimationController');
-var SlotMachine = require('../../modules/SlotMachine');
 
-var Update = Backbone.View.extend({
+var Greeting = Backbone.View.extend({
 
   template: _.template(template()),
 
@@ -64,21 +63,11 @@ var Update = Backbone.View.extend({
 
   hide: function() {
     this.animate.animateOut(this.el);
-    // TweenMax.to(this.el, {
-    //   bottom: 0,
-    //   ease: Power4.easeOut
-    // });
-    // this.shffuleConent();
   },
 
   show: function() {
 
     this.animate.animateIn(this.el);
-    // TweenMax.to(this.el, {
-    //   bottom: '-10%',
-    //   ease: Power4.easeOut
-    // });
-    // this.shffuleConent();
   },
 
   onClick:function(event) {
@@ -95,4 +84,4 @@ var Update = Backbone.View.extend({
   }
 });
 
-module.exports = Update;
+module.exports = Greeting;

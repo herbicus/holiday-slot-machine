@@ -26,14 +26,19 @@ var App = Backbone.View.extend({
     //   this.loadImage( 'images/desktop-background.jpg' );
     // }
 
-    // Put Images to Load Here Like So
-    // this.loadImage( 'images/your-image.jpg' );
-    // this.loadImage( 'images/your-image.png' );
-    // this.loadImage( 'images/your-image.gif' );
-
-    this.loadImage('https://placekitten.com/g/500/500');
-    this.loadImage('https://placekitten.com/g/600/500');
-    this.loadImage('https://placekitten.com/g/700/700');
+    this.loadImage('images/icon01.png');
+    this.loadImage('images/icon02.png');
+    this.loadImage('images/icon03.png');
+    this.loadImage('images/icon04.png');
+    this.loadImage('images/icon05.png');
+    this.loadImage('images/icon06.png');
+    this.loadImage('images/icon07.png');
+    this.loadImage('images/icon08.png');
+    this.loadImage('images/icon09.png');
+    this.loadImage('images/icon10.png');
+    this.loadImage('images/icon11.png');
+    this.loadImage('images/icon12.png');
+    this.loadImage('images/icon13.png');
 
   },
 

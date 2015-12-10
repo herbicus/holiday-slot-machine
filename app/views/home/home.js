@@ -21,7 +21,7 @@ var Home = Backbone.View.extend({
 
   leverPull: function() {
 
-    this.animate.leverAnimation('#lever', '.lever-container');
+    this.animate.leverAnimation('#lever');
       	
   }
 });
