@@ -2,9 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Backbone Template</title>
+    <title>Holiday Slots</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700|Fugaz+One' rel='stylesheet' type='text/css'>
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.png">
@@ -33,18 +35,20 @@
 
     <main class="displayNone">
 
-      <section id="home" style="box-shadow: -1px 5px 5px rgba(0,0,0,0.5);">
-        <div class="l-section-container vertical layout">
-          
-          <div class="greeting-container">
-            <h1 class="text-center">Pull The Lever</h1>
-          </div>
-
-          <a class="slots-lever" href="#greeting">Pull Lever</a>
-          <div class="flex"></div>
-          <!-- <img src="images/placeholder-slots.png" alt="placekitten-hero">     -->
-          
+      <section id="home">
+        
+        <div class="vertical layout" style="height: 100%;">
+        <div class="flex self-center hero-title-holder"><p>Greeting Goes Here</p></div>
+        <div class="flex"></div>
+        <div class="flex self-center hero-icon-holder"><p>Icon Goes here</p></div>
+        <div class="flex"></div>
+        
+        <div class="slots-container">
+          <div id="slots"></div>
+          <a href="#greeting" class="leverLink">Pull Lever</a>
         </div>
+        </div>
+
       </section>
       
       <section id="greeting-mobile"></section>
