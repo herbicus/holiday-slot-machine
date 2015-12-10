@@ -15,27 +15,14 @@ var Home = Backbone.View.extend({
     this.listenTo(this.model, 'change:route', this.onRouteChange);
 
     this.animate = new AnimationController();
+   
+    this.leverPull();
   },
 
   leverPull: function() {
-  	//var tl = new TimelineMax({paused: true});
 
-  	if (this.model.get('mobile') === false) {
-      TweenMax.to('canvas', 0.5, {
-        bottom: '-20%',
-        ease: Power2.easeOut
-      });
-    }
-
-  	// if($('canvas').hasClass('pulled')) {
-  	// 	tl.reverse();
-  	// } else {
-  	// 	tl.play();
-  	// }
-
-  	// $('canvas').addClass('pulled');
-
-  	
+    this.animate.leverAnimation('#lever', '.lever-container');
+      	
   }
 });
 

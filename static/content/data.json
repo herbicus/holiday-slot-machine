@@ -1,7 +1,7 @@
 {
   "data":
     {
-      "greeting": ["Happy Holidays", "Merry Christmas", "Happy X-Mas", "Yule Time Cheer", "Yon Kippur", "Seasons Greetings", "X-Mas Time"],
-      "icons": ["https://placekitten.com/g/500/500", "https://placekitten.com/g/700/500"]
+      "greeting": ["Happy Holidays", "Merry Christmas", "Happy X-Mas", "Yule Time Cheer", "Yon Kippur", "Seasons Greetings", "Happy Hanakau", "Spriche Deutch", "Feliz Navidad"],
+      "icons": ["https://placekitten.com/g/500/500", "https://placekitten.com/g/700/500", "http://lorempixel.com/600/600/nature/1", "http://lorempixel.com/600/600/nature/2", "http://lorempixel.com/600/600/nature/3", "http://lorempixel.com/600/600/nature/4", "http://lorempixel.com/600/600/nature/5", "http://lorempixel.com/600/600/nature/6", "http://lorempixel.com/600/600/nature/7", "http://lorempixel.com/600/600/nature/8"]
     }
 }
