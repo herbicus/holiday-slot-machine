@@ -35,21 +35,20 @@
 
     <main class="displayNone">
 
-      <section id="home" style="box-shadow: -1px 5px 5px rgba(0,0,0,0.5);">
-        <div class="l-section-container vertical layout">
-          
-          <div class="greeting-container">
-            <h2 class="text-center">Pull The Lever</h2>
-          </div>
-
-          <div class="lever-container">
-            <!-- <a class="slots-lever" id="lever" href="#greeting">Pull Lever</a> -->
-            <div class="slots-lever" id="lever"></div>
-          </div>
-          <div class="flex"></div>
-          <!-- <img src="images/placeholder-slots.png" alt="placekitten-hero">     -->
-          
+      <section id="home">
+        
+        <div class="vertical layout" style="height: 100%;">
+        <div class="flex self-center hero-title-holder"><h2>Greeting Goes Here</h2></div>
+        <div class="flex"></div>
+        <div class="flex self-center hero-icon-holder"></div>
+        <div class="flex"></div>
+        
+        <div class="slots-container">
+          <div id="slots"></div>
+          <a href="#greeting" id="lever" class="leverLink">Pull Lever</a>
         </div>
+        </div>
+
       </section>
       
       <section id="greeting-mobile"></section>
