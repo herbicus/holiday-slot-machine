@@ -5,7 +5,6 @@ var Backbone = require('backbone');
 var Home = require('../views/home/home.js');
 var Nav = require('../views/header-nav/nav.js');
 var Slots = require('../views/slots/slots.js');
-var GreetingMobile = require('../views/greeting-mobile/greeting-mobile.js');
 var Greeting = require('../views/greeting/greeting.js');
 
 var AppRouter = Backbone.Router.extend({
@@ -13,7 +12,6 @@ var AppRouter = Backbone.Router.extend({
   model: null,
   home: null,
   greeting: null,
-  greetingMobile: null,
 
   start: function( m ) {
 
@@ -21,7 +19,6 @@ var AppRouter = Backbone.Router.extend({
     this.nav = new Nav({el: $('#nav'), model: this.model});
     this.home = new Home({el: $('#home'), model: this.model});
     this.slots = new Slots({el: $('#slots'), model: this.model});
-    this.greetingMobile = new GreetingMobile({el: $('#greeting-mobile'), model: this.model});
     this.greeting = new Greeting({el: $('#greeting'), model: this.model});
 
     Backbone.history.start({pushState: false});
@@ -45,10 +42,6 @@ var AppRouter = Backbone.Router.extend({
 
   routeNav: function() {
     this.model.set({route: 'nav'});
-  },
-
-  routeGreetingMobile: function() {
-    this.model.set({route: 'greetingMobile'});
   },
 
   routeGreeting: function() {

@@ -19,18 +19,23 @@ h1, p, span, h2, h3, h4, h5, h6
    color $white
   
 h1
-	font 72px/78px 'Fugaz One', sans-serif
-	letter-spacing 3px 
+	font 47px/111px 'Fugaz One', sans-serif
+	letter-spacing 3px
+	margin 0
 	text-shadow 1px 1px 0px darken($siteRed, 15),
 	                 1px 2px 0px darken($white, 15),
 	                 1px 3px 0px darken($white, 15),
 	                 1px 4px 0px darken($white, 15),
 	                 1px 5px 0px darken($siteRed, 20)
+	@media $mobile
+		font-size 72px
+		line-height 134px  
 	
 h2, h3,
 h4, h5, h6
-	font 24px/32px 'Fugaz One', sans-serif
+	font 24px/45px 'Fugaz One', sans-serif
 	letter-spacing 2px 
+	margin 0 
 	
 p,
 span

@@ -1,12 +1,21 @@
-<div class="l-section-container vertical layout">
-  
-  <div class="greeting-container">
-  	<h1 class="flex text-center"><%= _.sample(data.greeting, 1) %></h1>
-  </div>
-  <a href="/">Try Again</a>
-
-  <img class="vertical center" src="<%= _.sample(data.icons, 1) %>" alt="icon placeholder">
+<div class="vertical layout">
 	
+	<!-- GREETING -->	
+	<div class="flex self-center text-center l-greeting-section">
+		<h1><%= _.sample(data.greeting, 1) %></h1>
+	</div>
+	<div class="flex"></div>
 
+	<!-- ICON -->
+	<div class="flex self-center">
+		<img class="vertical center" src="<%= _.sample(data.icons, 1) %>" alt="icon placeholder">
+	</div>
+	<div class="flex"></div>
+
+	<!-- CTA -->
+	<div class="flex self-center text-center">
+		<a href="/">- Play Again -</a>
+	</div>
+	
 </div>
   

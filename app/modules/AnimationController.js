@@ -41,11 +41,11 @@ module.exports = function() {
       edgeResistance: 1.5,
       bounds: {minY: -300, maxY: 0},
       cursor: '-webkit-grab',
-      onDragStart:function(){
-           TweenMax.set(element,{cursor:'-webkit-grabbing'});
+      onDragStart:function() {
+           TweenMax.set(element, {cursor:'-webkit-grabbing'});
       },
       onDragEnd:function() {
-        console.log("lever pulled");
+        console.log('lever pulled');
         TweenMax.to(element, 0.5, {
           y: -300,
           ease: Back.easeOut
@@ -59,16 +59,15 @@ module.exports = function() {
             TweenMax.to('.inline-slots', 0.25, {
               autoAlpha: 0,
               onComplete: function() {
-                window.location.href='#greeting'
+                window.location.href='#greeting';
               }
-            })
+            });
           }
-        })
+        });
         
       }
     });
 
-
-  }
+  };
 
 };

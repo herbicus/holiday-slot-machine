@@ -1,20 +1,41 @@
 #greeting
-  background rgba( 0, 0, 0, 0)
-  z-index 1
+  background rgba( green, 0.85)
+  z-index 10
   
-  img  
+  img
+    position relative
+    top -500px
+    overflow hidden
+    z-index -1
     width 100%
     max-width 200px
     height auto
-    margin-top: 50px;
-    text-align: center;
-    margin: 0 auto;
-  
-.greeting-container
-	height 200px
-	background red
-	
+    margin-top 50px
+    text-align center
+    margin: 0 auto
+    
+  a
+    font 24px/32px 'Fugaz One', sans-serif
+    letter-spacing 2px
+    text-decoration none
+    color $white
+    -webkit-transition color 0.5s ease-out 
+    -moz-transition color 0.5s ease-out 
+    -ms-transition color 0.5s ease-out 
+    -o-transition color 0.5s ease-out 
+    transition color 0.5s ease-out 
+    
+    &:hover
+      color red  
 
+	
+.l-greeting-section
+  position relative
+  top -135px
+  width 100%
+  background red
+  box-shadow 0 19px 38px rgba(black, .3), 0 15px 12px rgba(black, .22)
+   
 
 
 
