@@ -32,6 +32,32 @@
   <body>
     
     <!-- <header id="nav"></header> -->
+    <!-- theme -->
+    <audio id="theme">
+      <source src="audio/bossanova.mp3" type="audio/mp3" preload="auto" loop>
+      <source src="audio/bossanova.ogg" type="audio/ogg" preload="auto" loop>
+    </audio>
+
+    <!-- sound fx -->
+    <audio id="crank">
+      <source src="audio/grank.mp3" type="audio/mp3" preload="auto">
+      <source src="audio/grank.ogg" type="audio/ogg" preload="auto">
+    </audio>
+
+    <audio id="motion">
+      <source src="audio/motion.mp3" type="audio/mp3" preload="auto">
+      <!-- <source src="audio/WINNER.ogg" type="audio/ogg" preload="auto"> -->
+    </audio>
+
+    <audio id="winner">
+      <source src="audio/WINNER.mp3" type="audio/mp3" preload="auto">
+      <source src="audio/WINNER.ogg" type="audio/ogg" preload="auto">
+    </audio>
+
+    <audio id="loser">
+      <source src="audio/loser.mp3" type="audio/mp3" preload="auto">
+      <source src="audio/loser.ogg" type="audio/ogg" preload="auto">
+    </audio>
 
     <main class="displayNone">
 
@@ -49,9 +75,14 @@
           <div class="slots-container">
             <!-- slot machine svg -->
             <div id="slots"></div>
+            <!-- animated slots -->
             <img src="images/UpAnim.gif" alt="slot animation" class="slot-left inline-slots">
             <img src="images/DownAnim.gif" alt="slot animation" class="slot-middle inline-slots">
             <img src="images/UpAnim.gif" alt="" class="slot-right inline-slots">
+            <!-- base/losing/winning slots -->
+            <img src="images/icon02.png" alt="slots" class="slot-left inline-slots reveal reveal-left">
+            <img src="images/icon05.png" alt="slots" class="slot-middle inline-slots reveal reveal-center">
+            <img src="images/icon10.png" alt="slots" class="slot-right inline-slots reveal reveal-right">
 
             <!-- lever -->
             <svg version="1.1" id="lever" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
