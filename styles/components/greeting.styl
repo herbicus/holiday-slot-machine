@@ -36,7 +36,64 @@
   max-height 135px
   background $xmasRed
   box-shadow 0 19px 38px rgba(black, .3), 0 15px 12px rgba(black, .22)
-   
+  
+// social
+ul
+  margin 20px 0 0 0
+  padding 0
+  position relative
+  
+  li
+    display inline-block
+    width 40px
+    padding 0
+    margin 0 15px
+    -webkit-border-radius 50% 
+    border-radius 50%
+    background-color rgba(0, 172, 236, .05)
+    box-shadow 0 0 15px 15px rgba(0, 172, 236, .05)
+    
+    a
+      display block
+      margin 0
+      padding 0
+      width 30px
+      height 30px
+      padding 0
+      -webkit-transition color 0.75s ease-out 
+      -moz-transition color 0.75s ease-out 
+      -ms-transition color 0.75s ease-out 
+      -o-transition color 0.75s ease-out 
+      transition color 0.75s ease-out 
+      
+  // SVG's
+  .icon-facebook,
+  .icon-twitter
+    width 30px
+    height 30px
+    -webkit-transition color 0.75s ease-out 
+    -moz-transition color 0.75s ease-out 
+    -ms-transition color 0.75s ease-out 
+    -o-transition color 0.75s ease-out 
+    transition color 0.75s ease-out 
+    
+    @media screen and (min-width: 360px)
+      width 40px
+      height 40px
+    
+    // fill
+    .cls-1
+      fill $xmasRed
+      fill-rule evenodd
+      -webkit-transition fill 0.75s easeOut 
+      -moz-transition fill 0.75s easeOut 
+      -ms-transition fill 0.75s easeOut 
+      -o-transition fill 0.75s easeOut 
+      transition fill 0.75s easeOut 
+      
+    &:hover .cls-1
+      fill $white
+ 
 
 
 

@@ -29,6 +29,18 @@ module.exports = function() {
   	});
   };
 
+  this.iconSpin = function(element) {
+    this.element = element;
+
+    TweenMax.to(element, 25, {
+      rotationY: 360,
+      yoyo: true,
+      repeat: -1,
+      repeatDelay: 0.015,
+      ease: Linear.easeInOut
+    });
+  }
+
   // lever anim
   this.leverAnimation = function(element) {
     this.element = element;

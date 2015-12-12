@@ -74,6 +74,8 @@ var Greeting = Backbone.View.extend({
 
     this.animate.animateIn(this.el);
 
+    //this.animate.iconSpin('#mainIcon');
+
     TweenMax.to('.hero-title-holder', 1, {
       top: -100,
       ease: Power2.easeOut

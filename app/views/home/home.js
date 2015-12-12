@@ -14,7 +14,7 @@ var Home = Backbone.View.extend({
   initialize: function() {
     this.listenTo(this.model, 'change:route', this.onRouteChange);
 
-    //document.querySelector('#theme').play();
+    document.querySelector('#theme').play();
 
     $('.slots-container').removeClass("hasWon");
 
