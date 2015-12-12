@@ -14,7 +14,7 @@ var Home = Backbone.View.extend({
   initialize: function() {
     this.listenTo(this.model, 'change:route', this.onRouteChange);
 
-    document.getElementById('theme').play();
+    //document.querySelector('#theme').play();
 
     $('.slots-container').removeClass("hasWon");
 
@@ -38,6 +38,7 @@ var Home = Backbone.View.extend({
 
     TweenMax.set('#lever', {y: -300, x: -40});
 
+    // game logic and animations happen in onDragEnd()
     Draggable.create('#lever', {
       type:'y',
       throwProps: true,
@@ -47,19 +48,20 @@ var Home = Backbone.View.extend({
       onDragStart:function() {
            TweenMax.set('#lever', {cursor:'-webkit-grabbing'});
       },
-      onDragEnd:function() {
+      onDragEnd:function() { // spin slots
         console.log('lever pulled');
-        document.getElementById('crank').play();
+        document.querySelector('#crank').play();
 
-        // game logic
+        // game logic vars
         this.slotOne = [1,2,3];
         this.slotTwo = [1,2,3];
         this.choiceOne =  _.sample(this.slotOne, 1).toString();
         this.choiceTwo = _.sample(this.slotTwo, 1).toString();
         this.hasWon;
 
+        // stuff to do if win or lose
+        // if win - add hasWon class/asign three identical icons to display in slots
         if (this.choiceOne === this.choiceTwo) {
-          console.log('won');
           this.hasWon = true;
 
           $('.slots-container').addClass("hasWon");
@@ -67,51 +69,52 @@ var Home = Backbone.View.extend({
           console.log(content.winningSrc);
           $('.reveal').attr('src', content.winningSrc);
 
+        // if lose - grab three different icons
         } else {
-          console.log('lost');
           this.hasWon = false;
           $('.slots-container').removeClass("hasWon");
           $('.reveal-left').attr('src', content.losingSrc1);
           $('.reveal-middle').attr('src', content.losingSrc2);
           $('.reveal-right').attr('src', content.losingSrc3);
         }
-
-        console.log(this.hasWon);
         
+        // snap lever back up
         TweenMax.to('#lever', 0.5, {
           y: -300,
           ease: Back.easeOut
         });
 
-        TweenMax.to('.reveal', 0.5, {
-          display: 'none',
-          autoAlpha: 0,
-          top: '60%'
-        });
+        // hide revealed icons to make way for animated slots gif
+        TweenMax.set('.reveal', {display: 'none', autoAlpha: 0, top: '60%'});
 
         // slots spinning animation
-        TweenMax.to('.inline-slots', 3, {
+        var tl = new TimelineMax();
+
+        tl.to('.inline-slots', 1, { autoAlpha:1});
+        // TweenMax.to('.inline-slots', 1, {
+        tl.to('.inline-slots', 2.5, {
           autoAlpha: 1,
           ease: Power4.easeInOut,
-          onComplete: function() {
+          onComplete: function() { // when finished spin anim, reveal
             TweenMax.to('.inline-slots', 0.25, {
               autoAlpha: 0,
-              onComplete: function() { // when slots are done spinning....
+              onComplete: function() { // when slots are done spinning...               
+                // if win, display three identical icons
                 if ($('.slots-container').hasClass('hasWon')) {
                   TweenMax.staggerTo('.reveal', 0.5, {
                     display: 'block',
                     autoAlpha: 1,
                     top: '63%',
                     ease: Back.easeOut,
-                    onComplete: function() {
-                      document.getElementById('winner').play();
+                    onComplete: function() { // reveal #greeting view
+                      document.querySelector('#winner').play();
                       window.location.href = '#greeting';
                     }
                   }, 0.25);
-                  console.log('You have won, show somthing', this.hasWon);
+
+                // if lose, dispaly three different icons
                 } else {
-                  console.log('You have lost, try again');
-                  document.getElementById('loser').play();
+                  document.querySelector('#loser').play();
                   TweenMax.staggerTo('.reveal', 0.5, {
                     display: 'block',
                     autoAlpha: 1,
@@ -120,14 +123,17 @@ var Home = Backbone.View.extend({
                   }, 0.25);
                 }
                 
-              }
-            });
-          }
-        });
-        
-      }
+              } // end onComplete - winning or losing slot machine icons reveal
+            
+            }); // end Tween - spin gifs end and reveal icons
 
-    });
+          } // end onComplete - spin gif animation and decide to reveal win or lose icons
+
+        }); // end Tween - slots spin animation
+        
+      } // end onDragEnd()
+
+    }); // end Draggable
 
   }
 });

@@ -32,32 +32,6 @@
   <body>
     
     <!-- <header id="nav"></header> -->
-    <!-- theme -->
-    <audio id="theme">
-      <source src="audio/bossanova.mp3" type="audio/mp3" preload="auto" loop>
-      <source src="audio/bossanova.ogg" type="audio/ogg" preload="auto" loop>
-    </audio>
-
-    <!-- sound fx -->
-    <audio id="crank">
-      <source src="audio/grank.mp3" type="audio/mp3" preload="auto">
-      <source src="audio/grank.ogg" type="audio/ogg" preload="auto">
-    </audio>
-
-    <audio id="motion">
-      <source src="audio/motion.mp3" type="audio/mp3" preload="auto">
-      <!-- <source src="audio/WINNER.ogg" type="audio/ogg" preload="auto"> -->
-    </audio>
-
-    <audio id="winner">
-      <source src="audio/WINNER.mp3" type="audio/mp3" preload="auto">
-      <source src="audio/WINNER.ogg" type="audio/ogg" preload="auto">
-    </audio>
-
-    <audio id="loser">
-      <source src="audio/loser.mp3" type="audio/mp3" preload="auto">
-      <source src="audio/loser.ogg" type="audio/ogg" preload="auto">
-    </audio>
 
     <main class="displayNone">
 
@@ -112,6 +86,36 @@
     <div id="loading">
       <div id="loading-bar"></div>
     </div>
+
+    <div class="landscape-overlay"></div>
+
+    <!-- audio -->
+    <!-- theme -->
+    <audio id="theme">
+      <source src="audio/bossanova.mp3" type="audio/mp3" preload="auto" loop>
+      <source src="audio/bossanova.ogg" type="audio/ogg" preload="auto" loop>
+    </audio>
+
+    <!-- sound fx -->
+    <audio id="crank">
+      <source src="audio/grank.mp3" type="audio/mp3" preload="auto">
+      <source src="audio/grank.ogg" type="audio/ogg" preload="auto">
+    </audio>
+
+    <audio id="motion">
+      <source src="audio/motion.mp3" type="audio/mp3" preload="auto">
+      <!-- <source src="audio/WINNER.ogg" type="audio/ogg" preload="auto"> -->
+    </audio>
+
+    <audio id="winner">
+      <source src="audio/WINNER.mp3" type="audio/mp3" preload="auto">
+      <source src="audio/WINNER.ogg" type="audio/ogg" preload="auto">
+    </audio>
+
+    <audio id="loser">
+      <source src="audio/loser.mp3" type="audio/mp3" preload="auto">
+      <source src="audio/loser.ogg" type="audio/ogg" preload="auto">
+    </audio>
 
     <div id="debug">debug</div>
     <script src="js/main.build.js"></script>
