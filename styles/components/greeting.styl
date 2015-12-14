@@ -1,5 +1,5 @@
 #greeting
-  background rgba( $siteGreen, 0.85)
+  background rgba( $siteGreen, 0.95)
   z-index 10
   
   img
@@ -15,15 +15,15 @@
     margin: 0 auto
     
   a
-    font 24px/32px 'Fugaz One', sans-serif
-    letter-spacing 2px
+    font 700 24px/32px 'Mountains of Christmas', cursive
+    letter-spacing 4px
     text-decoration none
     color $white
     -webkit-transition color 0.5s ease-out 
     -moz-transition color 0.5s ease-out 
     -ms-transition color 0.5s ease-out 
     -o-transition color 0.5s ease-out 
-    transition color 0.5s ease-out 
+    transition color 0.5s ease-out
     
     &:hover
       color $xmasRed  
@@ -45,45 +45,55 @@ ul
   
   li
     display inline-block
-    width 40px
-    padding 0
+    width 50px
     margin 0 15px
     -webkit-border-radius 50% 
     border-radius 50%
     background-color rgba(0, 172, 236, .05)
     box-shadow 0 0 15px 15px rgba(0, 172, 236, .05)
+    // background $white
+    border 5px solid $white
+    border-radius 5px
+    height 50px
+    -webkit-transition border-color 0.5s ease-out 
+    -moz-transition border-color 0.5s ease-out 
+    -ms-transition border-color 0.5s ease-out 
+    -o-transition border-color 0.5s ease-out 
+    transition border-color 0.5s ease-out
+    
+    &:hover
+      border-color $xmasRed
     
     a
       display block
       margin 0
+      padding 5px
+      width 40px
+      height 40px
       padding 0
-      width 30px
-      height 30px
-      padding 0
-      -webkit-transition color 0.75s ease-out 
-      -moz-transition color 0.75s ease-out 
-      -ms-transition color 0.75s ease-out 
-      -o-transition color 0.75s ease-out 
-      transition color 0.75s ease-out 
+      -webkit-transition color 0.5s ease-out 
+      -moz-transition color 0.5s ease-out 
+      -ms-transition color 0.5s ease-out 
+      -o-transition color 0.5s ease-out 
+      transition color 0.5s ease-out
       
   // SVG's
   .icon-facebook,
   .icon-twitter
-    width 30px
-    height 30px
-    -webkit-transition color 0.75s ease-out 
-    -moz-transition color 0.75s ease-out 
-    -ms-transition color 0.75s ease-out 
-    -o-transition color 0.75s ease-out 
-    transition color 0.75s ease-out 
+    width 40px
+    height 40px
+    padding 5px
     
-    @media screen and (min-width: 360px)
-      width 40px
-      height 40px
+    path
+      -webkit-transition fill 0.5s ease-out 
+      -moz-transition fill 0.5s ease-out 
+      -ms-transition fill 0.5s ease-out 
+      -o-transition fill 0.5s ease-out 
+      transition fill 0.5s ease-out 
     
     // fill
-    .cls-1
-      fill $xmasRed
+    .social-icon-fill
+      fill $white
       fill-rule evenodd
       -webkit-transition fill 0.75s easeOut 
       -moz-transition fill 0.75s easeOut 
@@ -91,8 +101,8 @@ ul
       -o-transition fill 0.75s easeOut 
       transition fill 0.75s easeOut 
       
-    &:hover .cls-1
-      fill $white
+    &:hover .social-icon-fill
+      fill $xmasRed
  
 
 

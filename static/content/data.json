@@ -1,7 +1,7 @@
 {
   "data":
     {
-      "greeting": ["Happy Holidays", "Merry Christmas", "Happy X-Mas", "Yule Time Cheer", "Yon Kippur", "Seasons Greetings", "Happy Hanakau", "Spriche Deutch", "Feliz Navidad"],
+      "greeting": ["Happy Holidays", "Merry Christmas", "Noël Noël", "Deck The Halls", "Feliz Natal", "Happy X-Mas", "Yule Time Cheer", "Joy To The World", "Seasons Greetings", "Holly Jolly X-Mas", "Ho! Ho! Ho!", "Feliz Navidad", "Joyeux Noël"],
      "icons": ["images/icon01.png", "images/icon02.png", "images/icon03.png", "images/icon04.png", "images/icon05.png", "images/icon06.png", "images/icon07.png", "images/icon08.png", "images/icon09.png", "images/icon10.png", "images/icon11.png", "images/icon12.png", "images/icon13.png"]
     }
 }

@@ -87,7 +87,7 @@ var Slots = Backbone.View.extend({
         }
 
         // hide revealed icons to make way for animated slots gif
-        TweenMax.set('.reveal', {display: 'none', autoAlpha: 0, top: '55%'});
+        TweenMax.set('.reveal', {display: 'none', autoAlpha: 0, top: '45%'});
 
         // slots spinning animation
         var tl = new TimelineMax();
@@ -115,6 +115,11 @@ var Slots = Backbone.View.extend({
                 // if lose, dispaly three different icons
                 } else {
                   document.querySelector('#loser').play();
+
+                  $('.reveal-left').attr('src', content.losingSrc1);
+                  $('.reveal-middle').attr('src', content.losingSrc2);
+                  $('.reveal-right').attr('src', content.losingSrc3);
+
                   TweenMax.staggerTo('.reveal', 0.5, {
                     display: 'block',
                     autoAlpha: 1,
