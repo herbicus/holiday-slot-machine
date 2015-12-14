@@ -10,27 +10,15 @@ var Greeting = Backbone.View.extend({
 
   template: _.template(template()),
 
-  events: {
-    'click a': 'shffuleContent'
-  },
-
   initialize: function() {
 
-    // this.slotMachine = new SlotMachine();
-    // this.slotMachine.init();   
-    
-    // underscore
     var content = {
       data: this.model.get('data'),
-      newData: _.shuffle(this.model.get('data').greeting, 1),
-      newImg: _.shuffle(this.model.get('data').icons, 1)
+      winningSrc: _.shuffle(this.model.get('data').icons, 1),
+      losingSrc1: _.shuffle(this.model.get('data').icons, 1),
+      losingSrc2: _.shuffle(this.model.get('data').icons, 1),
+      losingSrc3: _.shuffle(this.model.get('data').icons, 1)
     };
-    //var content = this.model.get('data');
-
-    // console.log(this.newData);
-    // console.log(this.newImg);
-
-    console.log(content);
 
     this.$el.html(this.template(content));
 
@@ -40,24 +28,7 @@ var Greeting = Backbone.View.extend({
 
   },
 
-  init: function() {
-
-  },
-
-  shffuleContent: function() {
-    console.log('pushed');
-    _.shuffle(this.model.get('data').greeting, 1);
-    _.shuffle(this.model.get('data').icons, 1);
-
-    if (this.model.get('mobile') === false) {
-      TweenMax.to('canvas', 0.25, {
-        bottom: 0,
-        ease: Power4.easeOut
-      });
-    }
-
-  },
-
+  // #greeting autoAlpha: 0 - sets position of icon and greeting
   hide: function() {
     this.animate.animateOut(this.el);
     
@@ -70,11 +41,13 @@ var Greeting = Backbone.View.extend({
     TweenMax.set('#greeting img', {top: -500, autoAlpha: 0});
   },
 
+  // #greeting autoAlpha: 1 - tweens greeting and icon
   show: function() {
 
     this.animate.animateIn(this.el);
 
     //this.animate.iconSpin('#mainIcon');
+    document.querySelector('#theme').volume = 0.2;
 
     TweenMax.to('.hero-title-holder', 1, {
       top: -100,
@@ -94,10 +67,6 @@ var Greeting = Backbone.View.extend({
       }
     });
 
-  },
-
-  onClick:function(event) {
-    // tracking call here
   },
 
   onRouteChange: function() {

@@ -20,12 +20,6 @@ var App = Backbone.View.extend({
     this.loading++;
     this.model.fetch();
 
-    // if ( this.model.get('mobile') ){
-    //   this.loadImage( 'images/mobile-background.jpg' );
-    // } else {
-    //   this.loadImage( 'images/desktop-background.jpg' );
-    // }
-
     this.loadImage('images/icon01.png');
     this.loadImage('images/icon02.png');
     this.loadImage('images/icon03.png');
@@ -39,6 +33,9 @@ var App = Backbone.View.extend({
     this.loadImage('images/icon11.png');
     this.loadImage('images/icon12.png');
     this.loadImage('images/icon13.png');
+    this.loadImage('images/rotate-device.jpg');
+    this.loadImage('images/UpAnim.gif');
+    this.loadImage('images/DownAnim.gif');
 
   },
 
@@ -56,7 +53,8 @@ var App = Backbone.View.extend({
     var _show = this.show.bind(this);
     if ( ((this.loaded / this.loading) * 100) === 100 ){
       TweenMax.to( this.preloadBar.parent(), 0.25, {
-        autoAlpha: 0, 
+        autoAlpha: 0,
+        display: 'none',
         onComplete: function() {
           var appRouter = new AppRouter();
           appRouter.start( _model );

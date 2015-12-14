@@ -2,8 +2,11 @@
 	width 100%
 	max-width 700px
 	margin 0 auto
-	padding 0 25px
+	padding 0 10px
 	position relative
+	
+	@media $tablet
+		padding 0 25px 
 	
 .hero-title-holder	
 	position relative
@@ -11,7 +14,7 @@
 	width 100%
 	height 45px
 	background $xmasRed
-	box-shadow 0 19px 38px rgba(black, .3), 0 15px 12px rgba(black, .22) 
+	box-shadow 0 19px 38px rgba($black, 0.3), 0 15px 12px rgba($black, 0.22) 
 	
 .hero-icon-holder	
 	color $white
@@ -24,9 +27,8 @@
 	
 #lever
 	position absolute
-	top 75%
-	left 75%
-	left 105%
+	top 25%
+	left 54%
 	z-index 1 !important
 	display inline-block
 	-webkit-transform translate(-50%, -50%)
@@ -37,22 +39,37 @@
 	-webkit-background-size contain 
 	-o-background-size contain 
 	background-size contain
-	width 92px
+	width 55px
 	text-indent -9999px
 	transform-origin center bottom
 	
+	@media $tablet
+		width 92px
+		top 75%
+		left 105%
+	
 #leverTrack
 	position absolute
-	top 65%
-	left 106%
+	top -40%
+	left 50%
 	z-index 0
 	display inline-block
-	-webkit-transform translate(-50%, -50%)
-	-moz-transform translate(-50%, -50%)
-	-ms-transform translate(-50%, -50%)
-	-o-transform translate(-50%, -50%)
-	transform translate(-50%, -50%)
+	-webkit-transform translate(-50%, -50%) scale(0.5)
+	-moz-transform translate(-50%, -50%) scale(0.5)
+	-ms-transform translate(-50%, -50%) scale(0.5)
+	-o-transform translate(-50%, -50%) scale(0.5)
+	transform translate(-50%, -50%) scale(0.5)
 	width 92px
+	height auto 
+	
+	@media $tablet
+		top 65%
+		left 106%
+		-webkit-transform translate(-50%, -50%) scale(1)
+		-moz-transform translate(-50%, -50%) scale(1)
+		-ms-transform translate(-50%, -50%) scale(1)
+		-o-transform translate(-50%, -50%) scale(1)
+		transform translate(-50%, -50%) scale(1)
 	
 	
 .inline-slots
