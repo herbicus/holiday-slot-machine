@@ -20,6 +20,7 @@
     "jquery": false,
     "predef": [
       "TweenMax",
+      "Draggable",
       "TimelineMax",
       "Power1",
       "Power2",

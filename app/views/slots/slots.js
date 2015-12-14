@@ -55,7 +55,7 @@ var Slots = Backbone.View.extend({
         document.querySelector('#crank').play();
 
         // snap lever back up
-        TweenMax.to('#lever', 0.5, {
+        TweenMax.to('#lever', 0.35, {
           y: -300,
           ease: Back.easeOut
         });
@@ -107,7 +107,7 @@ var Slots = Backbone.View.extend({
                     top: '63%',
                     ease: Back.easeOut,
                     onComplete: function() { // reveal #greeting view
-                      setTimeout(function(){ 
+                      setTimeout(function() { 
                         document.querySelector('#winner').play();
                         window.location.href = '#greeting';
                       }, 750);                    
@@ -116,7 +116,7 @@ var Slots = Backbone.View.extend({
 
                 // if lose, dispaly three different icons
                 } else {
-                  setTimeout(function(){ 
+                  setTimeout(function() { 
                     document.querySelector('#loser').play();
                   }, 750);
                   

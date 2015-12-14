@@ -14,10 +14,10 @@ var Home = Backbone.View.extend({
 
     this.$el.html(template());
 
-    //document.querySelector('#theme').play();
+    document.querySelector('#theme').play();
 
     $('.slots-container').removeClass('hasWon');
-    
+
   }
 
 });
