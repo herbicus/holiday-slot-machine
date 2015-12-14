@@ -53,6 +53,7 @@ var Slots = Backbone.View.extend({
       onDragEnd:function() { // spin slots
         console.log('lever pulled');
         document.querySelector('#crank').play();
+        document.querySelector('#motion').play();
 
         // snap lever back up
         TweenMax.to('#lever', 0.35, {
@@ -92,7 +93,7 @@ var Slots = Backbone.View.extend({
         // slots spinning animation
         var tl = new TimelineMax();
         tl.to('.inline-slots', 1, {autoAlpha: 1});
-        tl.to('.inline-slots', 2.5, {
+        tl.to('.inline-slots', 3, {
           autoAlpha: 1,
           ease: Power4.easeInOut,
           onComplete: function() { // when finished spin anim, reveal
