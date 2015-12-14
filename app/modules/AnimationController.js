@@ -29,45 +29,18 @@ module.exports = function() {
   	});
   };
 
-  // lever anim
-  this.leverAnimation = function(element) {
+  // card spin - maybe
+  this.iconSpin = function(element) {
     this.element = element;
 
-    TweenMax.set(element, {y: -300, x: -40});
-
-    Draggable.create(element, {
-      type:'y',
-      throwProps: true,
-      edgeResistance: 1.5,
-      bounds: {minY: -300, maxY: 0},
-      cursor: '-webkit-grab',
-      onDragStart:function() {
-           TweenMax.set(element, {cursor:'-webkit-grabbing'});
-      },
-      onDragEnd:function() {
-        console.log('lever pulled');
-        TweenMax.to(element, 0.5, {
-          y: -300,
-          ease: Back.easeOut
-        });
-
-        TweenMax.to('.inline-slots', 3, {
-          delay: 0.25,
-          autoAlpha: 1,
-          ease: Power4.easeInOut,
-          onComplete: function() {
-            TweenMax.to('.inline-slots', 0.25, {
-              autoAlpha: 0,
-              onComplete: function() {
-                window.location.href='#greeting';
-              }
-            });
-          }
-        });
-        
-      }
+    TweenMax.to(element, 25, {
+      rotationY: 360,
+      yoyo: true,
+      repeat: -1,
+      repeatDelay: 0.015,
+      ease: Linear.easeInOut
     });
-
+  
   };
 
 };

@@ -36,7 +36,37 @@
 // ----- that are easily seen by everybody else
 // -------------------------------------
 
+.landscape-overlay    
+  position absolute
+  width 100%
+  height 100%
+  background $siteGreen
+  z-index 9999
+  display none
 
+  &:before
+    content ''
+    z-index 9900
+    background url("../images/rotate-device.jpg")no-repeat center center
+    -webkit-background-size cover
+    -o-background-size cover
+    background-size cover
+    position fixed
+    width 100%
+    height 100%
+
+  @media only screen and (max-device-width: 736px) and (orientation : landscape)
+    display block
+    
+  @media only screen and (min-device-width: 414px) and (max-device-width: 1024px) and (orientation : portrait)
+    display block
+    
+    &:before
+      background url("../images/rotate-tablet.png")no-repeat center center
+      -webkit-background-size contain
+      -o-background-size contain
+      background-size contain
+    
 // -------------------------------------
 //   Shame
 // -------------------------------------
