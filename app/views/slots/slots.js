@@ -107,15 +107,19 @@ var Slots = Backbone.View.extend({
                     top: '63%',
                     ease: Back.easeOut,
                     onComplete: function() { // reveal #greeting view
-                      document.querySelector('#winner').play();
-                      window.location.href = '#greeting';
+                      setTimeout(function(){ 
+                        document.querySelector('#winner').play();
+                        window.location.href = '#greeting';
+                      }, 750);                    
                     }
                   }, 0.25);
 
                 // if lose, dispaly three different icons
                 } else {
-                  document.querySelector('#loser').play();
-
+                  setTimeout(function(){ 
+                    document.querySelector('#loser').play();
+                  }, 750);
+                  
                   $('.reveal-left').attr('src', content.losingSrc1);
                   $('.reveal-middle').attr('src', content.losingSrc2);
                   $('.reveal-right').attr('src', content.losingSrc3);
