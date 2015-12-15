@@ -36,11 +36,11 @@
     letter-spacing 5px
     text-decoration none
     color $siteGreen
-    -webkit-transition color 0.5s ease-out 
-    -moz-transition color 0.5s ease-out 
-    -ms-transition color 0.5s ease-out 
-    -o-transition color 0.5s ease-out 
-    transition color 0.5s ease-out
+    -webkit-transition color 0.3s ease-out 
+    -moz-transition color 0.3s ease-out 
+    -ms-transition color 0.3s ease-out 
+    -o-transition color 0.3s ease-out 
+    transition color 0.3s ease-out
     
     &:hover
       color $xmasRed
@@ -53,6 +53,11 @@
     border-radius 5px
     visibility hidden
     opacity 0
+    -webkit-transition all 0.3s ease-out 
+    -moz-transition all 0.3s ease-out 
+    -ms-transition all 0.3s ease-out 
+    -o-transition all 0.3s ease-out 
+    transition all 0.3s ease-out
     
     &:hover
       border-color $xmasRed
@@ -67,7 +72,7 @@
       font-size 47px
       line-height 62px
   
-  @media $tablet  
+  @media screen and (min-width: 1025px)  
     img
       max-width 200px
       padding-top 0
@@ -97,7 +102,7 @@
   position relative
   visibility hidden
   opacity 0
-  top -20px
+  top -10px
 
 ul
   margin 40px 0 0 0
@@ -107,7 +112,7 @@ ul
   @media $iphonePlus
     margin 20px 0 0 0
   
-  @media $tablet
+  @media screen and (min-width: 1025px)
     margin 40px 0 20px 0
   
   li
@@ -121,11 +126,11 @@ ul
     border 5px solid $siteGreen
     border-radius 5px
     height 50px
-    -webkit-transition border-color 0.5s ease-out 
-    -moz-transition border-color 0.5s ease-out 
-    -ms-transition border-color 0.5s ease-out 
-    -o-transition border-color 0.5s ease-out 
-    transition border-color 0.5s ease-out
+    -webkit-transition border-color 0.3s ease-out 
+    -moz-transition border-color 0.3s ease-out 
+    -ms-transition border-color 0.3s ease-out 
+    -o-transition border-color 0.3s ease-out 
+    transition border-color 0.3s ease-out
     
     &:hover
       border-color $xmasRed
@@ -137,11 +142,11 @@ ul
       width 40px
       height 40px
       padding 0
-      -webkit-transition color 0.5s ease-out 
-      -moz-transition color 0.5s ease-out 
-      -ms-transition color 0.5s ease-out 
-      -o-transition color 0.5s ease-out 
-      transition color 0.5s ease-out
+      -webkit-transition color 0.3s ease-out 
+      -moz-transition color 0.3s ease-out 
+      -ms-transition color 0.3s ease-out 
+      -o-transition color 0.3s ease-out 
+      transition color 0.3s ease-out
       
   // SVG's
   .icon-facebook,
@@ -151,26 +156,24 @@ ul
     padding 5px
     
     path
-      -webkit-transition fill 0.5s ease-out 
-      -moz-transition fill 0.5s ease-out 
-      -ms-transition fill 0.5s ease-out 
-      -o-transition fill 0.5s ease-out 
-      transition fill 0.5s ease-out 
+      -webkit-transition fill 0.3s ease-out 
+      -moz-transition fill 0.3s ease-out 
+      -ms-transition fill 0.3s ease-out 
+      -o-transition fill 0.3s ease-out 
+      transition fill 0.3s ease-out 
     
     // fill
     .social-icon-fill
       fill $siteGreen
       fill-rule evenodd
-      -webkit-transition fill 0.75s easeOut 
-      -moz-transition fill 0.75s easeOut 
-      -ms-transition fill 0.75s easeOut 
-      -o-transition fill 0.75s easeOut 
-      transition fill 0.75s easeOut 
+      -webkit-transition fill 0.3s easeOut 
+      -moz-transition fill 0.3s easeOut 
+      -ms-transition fill 0.3s easeOut 
+      -o-transition fill 0.3s easeOut 
+      transition fill 0.3s easeOut 
       
     &:hover .social-icon-fill
       fill $xmasRed
- 
-
 
 
 
