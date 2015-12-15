@@ -18,9 +18,25 @@ var Home = Backbone.View.extend({
 
     this.animate = new AnimationController();
 
-    //document.querySelector('#theme').play();
+    document.querySelector('#theme').play();
 
     $('.slots-container').removeClass('hasWon');
+
+    // outdated browser stuff
+    if (this.model.get('outdated')) {
+      TweenMax.to($('.outdated-overlay'), 0.5, {
+        display: 'block',
+        autoAlpha: 1,
+        zIndex: 9999,
+        onComplete: function() {
+          TweenMax.to('.overlay-wrap', 0.5, {
+            top: 0,
+            autoAlpha: 1,
+            ease: Power3.easeOut
+          });
+        }
+      });
+    }
 
   },
 
