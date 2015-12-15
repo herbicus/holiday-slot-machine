@@ -44,28 +44,16 @@ var Greeting = Backbone.View.extend({
   // #greeting autoAlpha: 1 - tweens greeting and icon
   show: function() {
 
-    this.animate.animateIn(this.el);
-
-    //this.animate.iconSpin('#mainIcon');
     document.querySelector('#theme').volume = 0.2;
+    this.animate.animateIn(this.el);
+    //this.animate.iconSpin('#mainIcon');
 
-    TweenMax.to('.hero-title-holder', 1, {
-      top: -100,
-      ease: Power2.easeOut
-    });
+    var tl = new TimelineMax();
 
-    TweenMax.to('.l-greeting-section', 0.5, {
-      delay: 0.15,
-      top: 0,
-      ease: Power4.easeOut,
-      onComplete: function() {
-        TweenMax.to('#greeting img', 0.75, {
-          top: 0,
-          autoAlpha: 1,
-          ease: Power3.easeOut
-        });
-      }
-    });
+    tl.to('#greeting', 0.75, {delay: 0.15, height: '90%', ease: Power4.easeInOut});
+    tl.to('.hero-title-holder', 0.75, {top: -100, autoAlpha: 1, ease: Power2.easeOut}, 0.8);
+    tl.to('.l-greeting-section', 0.75, {top: 0, autoAlpha: 1, ease: Power4.easeOut}, 0.9);
+    tl.to('#greeting img', 0.75, {top: 0, autoAlpha: 1, ease: Power3.easeOut}, 1);
 
   },
 
