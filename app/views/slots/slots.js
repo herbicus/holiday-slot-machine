@@ -216,10 +216,6 @@ var Slots = Backbone.View.extend({
                   setTimeout(function() { 
                     document.querySelector('#loser').play();
                   }, 750);
-                  
-                  $('.reveal-left').attr('src', content.losingSrc1);
-                  $('.reveal-middle').attr('src', content.losingSrc2);
-                  $('.reveal-right').attr('src', content.losingSrc3);
 
                   TweenMax.staggerTo('.reveal', 0.5, {
                     display: 'block',
