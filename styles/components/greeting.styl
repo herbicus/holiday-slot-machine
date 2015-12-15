@@ -1,7 +1,6 @@
 #greeting
   centerer(50%)
   overflow hidden
-  // background $siteGreen
   z-index 10
   width 95%
   height 90%
@@ -14,7 +13,7 @@
   background-size cover
   
   h1
-    font 700 47px/62px 'Mountains of Christmas', cursive
+    font 700 32px/47px 'Mountains of Christmas', cursive
     padding 30px 5px
   
   img
@@ -23,18 +22,18 @@
     overflow hidden
     z-index -1
     width 100%
-    max-width 150px
+    max-width 125px
     height auto
     margin-top 50px
     text-align center
     margin 0 auto
-    padding-top 20px
+    padding-top 10px
     visibility hidden
     opacity 0
     
   a
-    font 700 24px/32px 'Mountains of Christmas', cursive
-    letter-spacing 4px
+    font 700 16px/24px 'Open Sans', sans-serif
+    letter-spacing 5px
     text-decoration none
     color $siteGreen
     -webkit-transition color 0.5s ease-out 
@@ -44,10 +43,31 @@
     transition color 0.5s ease-out
     
     &:hover
-      color $xmasRed  
+      color $xmasRed
+      
+  .btn-play-again
+    position relative
+    top -20px
+    padding 5px 10px
+    border 5px solid $siteGreen
+    border-radius 5px
+    visibility hidden
+    opacity 0
+    
+    &:hover
+      border-color $xmasRed
+
+  @media $iphone6
+    img
+      max-width 150px
+      padding-top 20px
+
+  @media $iphonePlus
+    h1
+      font-size 47px
+      line-height 62px
   
-  @media $tablet
-  
+  @media $tablet  
     img
       max-width 200px
       padding-top 0
@@ -73,13 +93,22 @@
   // box-shadow 0 19px 38px rgba(black, .3), 0 15px 12px rgba(black, .22)
   
 // social
+#social-list
+  position relative
+  visibility hidden
+  opacity 0
+  top -20px
+
 ul
   margin 40px 0 0 0
   padding 0
   position relative
   
-  @media $tablet
+  @media $iphonePlus
     margin 20px 0 0 0
+  
+  @media $tablet
+    margin 40px 0 20px 0
   
   li
     display inline-block
@@ -89,7 +118,6 @@ ul
     border-radius 50%
     background-color rgba(0, 172, 236, .05)
     box-shadow 0 0 15px 15px rgba(0, 172, 236, .05)
-    // background $white
     border 5px solid $siteGreen
     border-radius 5px
     height 50px

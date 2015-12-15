@@ -18,7 +18,7 @@ var Home = Backbone.View.extend({
 
     this.animate = new AnimationController();
 
-    document.querySelector('#theme').play();
+    //document.querySelector('#theme').play();
 
     $('.slots-container').removeClass('hasWon');
 
