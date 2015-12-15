@@ -2,6 +2,6 @@
   "data":
     {
       "greeting": ["Happy Holidays", "Merry Christmas", "Noël Noël", "Deck The Halls", "Feliz Natal", "Happy X-Mas", "Yule Time Cheer", "Joy To The World", "Season's Greetings", "Holly Jolly X-Mas", "Ho! Ho! Ho!", "Feliz Navidad", "Joyeux Noël"],
-     "icons": ["images/icon01.png", "images/icon02.png", "images/icon03.png", "images/icon04.png", "images/icon05.png", "images/icon06.png", "images/icon07.png", "images/icon08.png", "images/icon09.png", "images/icon10.png", "images/icon11.png", "images/icon12.png", "images/icon13.png"]
+     "icons": ["images/icon01.png", "images/icon02.png", "images/icon03.png", "images/icon04.png", "images/icon05.png", "images/icon06.png", "images/icon07.png", "images/icon08.png", "images/icon09.png", "images/icon10.png", "images/icon11.png", "images/icon12.png", "images/icon13.png", "images/icon14.png", "images/icon15.png", "images/icon16.png", "images/icon17.png", "images/icon18.png", "images/icon19.png", "images/icon20.png", "images/icon21.png", "images/icon22.png", "images/icon23.png"]
     }
 }
