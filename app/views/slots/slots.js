@@ -35,8 +35,6 @@ var Slots = Backbone.View.extend({
       losingSrc3: _.sample(this.model.get('data').icons, 1)
     };
 
-    // console.log(content);
-
     // Mobile
     $('#mobilePlay').on('click', function() {
       console.log('lever pulled');
@@ -70,9 +68,9 @@ var Slots = Backbone.View.extend({
       } else {
         this.hasWon = false;
         $('.slots-container').removeClass('hasWon');
-        $('.reveal-left').attr('src', content.losingSrc1);
-        $('.reveal-middle').attr('src', content.losingSrc2);
-        $('.reveal-right').attr('src', content.losingSrc3);
+        $('.reveal-left').attr('src', _.sample(content.data.icons, 1).toString());
+        $('.reveal-middle').attr('src', _.sample(content.data.icons, 1).toString());
+        $('.reveal-right').attr('src', _.sample(content.data.icons, 1).toString());
       }
 
       // hide revealed icons to make way for animated slots gif
@@ -108,10 +106,6 @@ var Slots = Backbone.View.extend({
                 setTimeout(function() { 
                   document.querySelector('#loser').play();
                 }, 750);
-                
-                $('.reveal-left').attr('src', content.losingSrc1);
-                $('.reveal-middle').attr('src', content.losingSrc2);
-                $('.reveal-right').attr('src', content.losingSrc3);
 
                 TweenMax.staggerTo('.reveal', 0.5, {
                   display: 'block',
@@ -178,9 +172,10 @@ var Slots = Backbone.View.extend({
         } else {
           this.hasWon = false;
           $('.slots-container').removeClass('hasWon');
-          $('.reveal-left').attr('src', content.losingSrc1);
-          $('.reveal-middle').attr('src', content.losingSrc2);
-          $('.reveal-right').attr('src', content.losingSrc3);
+
+          $('.reveal-left').attr('src', _.sample(content.data.icons, 1).toString());
+          $('.reveal-middle').attr('src', _.sample(content.data.icons, 1).toString());
+          $('.reveal-right').attr('src', _.sample(content.data.icons, 1).toString());
         }
 
         // hide revealed icons to make way for animated slots gif
