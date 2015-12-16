@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>2015 Holiday Slots</title>
-    <meta name="description" content="">
+    <meta name="description" content="Wishing everyone joy, gifts and warmth for the 2015 Holiday Season.  The 2015 Holiday Slot Machine rewards you with a random Holiday themed icon and greeting if you win.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700|Mountains+of+Christmas:400,700' rel='stylesheet' type='text/css'>
@@ -12,15 +12,15 @@
     <link rel="icon" href="images/favicon.png">
 
     <!-- Facebook -->
-    <meta name="og:title" property="og:title" content="2015 Holiday Slot Machine">
-    <meta name="og:site_name" property="og:site_name" content="2015 Holiday Slot Machine">
-    <meta name="og:url" property="og:url" content="http://happy-holidays.herbtorres.com/">
-    <meta name="og:description" property="og:description" content="In an effort not to offend anyone, these holiday greetings will be randomly generated so there is no one to blame if they make you mad.">
-    <meta name="og:image" property="og:image" content="http://happy-holidays.herbtorres.com/images/share-fb.jpg">
+    <meta property="og:title" content="2015 Holiday Slot Machine">
+    <meta property="og:site_name" content="2015 Holiday Slot Machine">
+    <meta property="og:url" content="http://happy-holidays.herbtorres.com/">
+    <meta property="og:description" content="In an effort not to offend anyone, these holiday greetings will be randomly generated so there is no one to blame if they make you mad.">
+    <meta property="og:image" content="http://happy-holidays.herbtorres.com/images/share-fb.jpg">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="2015 Holiday Slot Machine">
-    <meta name="twitter:site" content="@herb_X">
+    <meta name="twitter:site" content="@herb_x">
     <meta name="twitter:creator" content="Herb Torres">
     <meta name="twitter:title" content="2015 Holiday Slot Machine">
     <meta name="twitter:description" content="In an effort not to offend anyone, these holiday greetings will be randomly generated so there is no one to blame if they make you mad.">
@@ -29,8 +29,6 @@
     <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
-    
-    <!-- <header id="nav"></header> -->
 
     <main class="displayNone">
 
@@ -39,46 +37,19 @@
 
     </main>
 
+    <!-- audio -->
+    <div id="audio"></div>
+
+    <!-- loading bar -->
     <div id="loading">
       <div id="loading-bar"></div>
     </div>
 
+    <!-- overlays -->
+    <div id="overlays"></div>
     <div class="landscape-overlay"></div>
-    <div class="outdated-overlay">
-      <div class="overlay-wrap">
-        <h1>Please Update Your Broswer</h1>
-        <img src="images/icon21.png" alt="Frosty">
-      </div>
-    </div>
-
-    <!-- audio -->
-    <!-- theme -->
-    <audio id="theme">
-      <source src="audio/bossanova.mp3" type="audio/mp3" preload="auto">
-      <source src="audio/bossanova.ogg" type="audio/ogg" preload="auto">
-    </audio>
-
-    <!-- sound fx -->
-    <audio id="crank">
-      <source src="audio/grank.mp3" type="audio/mp3" preload="auto">
-      <source src="audio/grank.ogg" type="audio/ogg" preload="auto">
-    </audio>
-
-    <audio id="motion">
-      <source src="audio/motion.mp3" type="audio/mp3" preload="auto">
-      <source src="audio/motion.ogg" type="audio/ogg" preload="auto">
-    </audio>
-
-    <audio id="winner">
-      <source src="audio/WINNER.mp3" type="audio/mp3" preload="auto">
-      <source src="audio/WINNER.ogg" type="audio/ogg" preload="auto">
-    </audio>
-
-    <audio id="loser">
-      <source src="audio/loser.mp3" type="audio/mp3" preload="auto">
-      <source src="audio/loser.ogg" type="audio/ogg" preload="auto">
-    </audio>
 
     <script src="js/main.build.js"></script>
+
   </body>
 </html>
