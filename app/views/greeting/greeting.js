@@ -5,6 +5,7 @@ var _ = require('underscore');
 var Backbone = require('backbone');
 var template = require('./greeting.html');
 var AnimationController = require('../../modules/AnimationController');
+var SnowController = require('../../modules/SnowController');
 
 var Greeting = Backbone.View.extend({
 
@@ -25,6 +26,8 @@ var Greeting = Backbone.View.extend({
     this.listenTo(this.model, 'change:route', this.onRouteChange);
 
     this.animate = new AnimationController();
+
+    this.snow = new SnowController();
 
   },
 
@@ -47,6 +50,8 @@ var Greeting = Backbone.View.extend({
     document.querySelector('#theme').volume = 0.2;
     this.animate.animateIn(this.el);
     //this.animate.iconSpin('#mainIcon');
+
+    this.snow.letItSnow();
 
     var tl = new TimelineMax();
 

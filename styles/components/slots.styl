@@ -1,13 +1,23 @@
 #slots
 	width 100%
-	max-width 700px
+	max-width 320px
 	margin 0 auto
 	padding 0 10px
 	position relative
 	
-	@media $tablet
-		padding 0 25px 
+	@media only screen and (min-device-width: 360px) and (orientation : portrait)
+		max-width 360px
 	
+	@media only screen and (min-device-width: 414px) and (orientation : portrait)
+		max-width 414px
+		
+	@media only screen and (min-device-width: 375px) and (orientation : portrait)
+		max-width 375px
+		
+	@media $tablet
+		max-width 700px
+		padding 0 25px
+		
 .hero-title-holder	
 	position relative
 	text-align center
