@@ -76,10 +76,12 @@
 	
 .inline-slots
 	position absolute
-	top 63%
+	top 62.5%
+	top 61.25%
 	left 50%
 	width 100%
 	max-width 70px
+	max-width 78px
 	-webkit-transform translate(-50%, -50%)
 	-moz-transform translate(-50%, -50%)
 	-ms-transform translate(-50%, -50%)
@@ -87,8 +89,16 @@
 	transform translate(-50%, -50%)
 	visibility hidden
 	
+	@media $iphone6
+		top 62.25%
+		max-width 92px
+	
+	@media $iphonePlus
+		max-width 103px
+		
 	@media $tablet
-		max-width 150px
+		top 62.5%
+		max-width 170px
 	
 .slot-left
 	left 22%
@@ -98,4 +108,8 @@
 	
 .reveal
 	visibility visible
+	max-width 70px
+	
+	@media $tablet
+		max-width 150px
 	
