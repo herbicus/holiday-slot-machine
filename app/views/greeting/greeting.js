@@ -51,7 +51,13 @@ var Greeting = Backbone.View.extend({
     this.animate.animateIn(this.el);
     //this.animate.iconSpin('#mainIcon');
 
-    this.snow.letItSnow();
+    
+    if ( this.model.get('mobile') || this.model.get('tablet') ) {
+      this.snowAmount = 500;
+    } else {
+      this.snowAmount = 100;
+    }
+    this.snow.letItSnow(this.snowAmount);
 
     var tl = new TimelineMax();
 

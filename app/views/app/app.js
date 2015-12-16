@@ -44,7 +44,7 @@ var App = Backbone.View.extend({
       'images/icon21.png',
       'images/icon22.png',
       'images/icon23.png',
-      'images/lever.png',
+      'images/lever-x.png',
       'images/card-bg-grey.jpg',
       'images/rotate-tablet.png',
       'images/rotate-device.jpg',
