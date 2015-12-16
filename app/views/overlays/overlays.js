@@ -3,10 +3,10 @@
 var $ = require('jquery');
 var _ = require('underscore');
 var Backbone = require('backbone');
-var template = require('./home.html');
+var template = require('./overlays.html');
 var AnimationController = require('../../modules/AnimationController');
 
-var Home = Backbone.View.extend({
+var Overlays = Backbone.View.extend({
 
   template: _.template(template()),
 
@@ -17,9 +17,7 @@ var Home = Backbone.View.extend({
     this.listenTo(this.model, 'change:route', this.onRouteChange);
 
     this.animate = new AnimationController();
-
-    $('.slots-container').removeClass('hasWon');
-
+    
   },
 
   hide: function() {
@@ -32,19 +30,33 @@ var Home = Backbone.View.extend({
 
     this.animate.animateIn(this.el);
 
-    document.querySelector('#theme').play();
-
   },
 
   onRouteChange: function() {
 
-    if (this.model.get('route') === 'home' ){
+  	if (this.model.get('outdated')) {
+      
       this.show();
+      
+      TweenMax.to($('.outdated-overlay'), 0.5, {
+        display: 'block',
+        autoAlpha: 1,
+        zIndex: 9999,
+        onComplete: function() {
+          TweenMax.to('.overlay-wrap', 0.5, {
+            top: 0,
+            autoAlpha: 1,
+            ease: Power3.easeOut
+          });
+        }
+      });
+
     } else {
-      this.hide();
+      this.hide();  
     }
+
   }
 
 });
 
-module.exports = Home;
+module.exports = Overlays;

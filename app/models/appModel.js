@@ -14,7 +14,7 @@ var currentIe = isIe && bowser.version > 10;
 
 // update browser vars
 var bBerry = bowser.blackberry === true;
-var outdatedIe = isIe && bowser.version <= 10;
+var outdatedIe = isIe && bowser.version <= 11;
 var outdatedIos = isIos && bowser.version < 7;
 var outdatedSafari = isSafari && bowser.version < 7;
 var outdatedAndroid = isAndroid && bowser.version < 4.2;
