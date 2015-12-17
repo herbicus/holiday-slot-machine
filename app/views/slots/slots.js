@@ -28,14 +28,12 @@ var Slots = Backbone.View.extend({
   gameMechanics: function() {
 
     var content = {
-      data: this.model.get('data'),
-      winningSrc: _.sample(this.model.get('data').icons, 1),
-      losingSrc1: _.sample(this.model.get('data').icons, 1),
-      losingSrc2: _.sample(this.model.get('data').icons, 1),
-      losingSrc3: _.sample(this.model.get('data').icons, 1)
+      data: this.model.get('data')
     };
 
-    // Mobile
+    /**
+      * Mobile - Button
+    */
     $('#mobilePlay').on('click', function() {
       console.log('lever pulled');
       document.querySelector('#crank').play();
@@ -61,15 +59,14 @@ var Slots = Backbone.View.extend({
 
         $('.slots-container').addClass('hasWon');
 
-        console.log(content.winningSrc);
-        $('.reveal').attr('src', content.winningSrc);
+        $('.reveal').attr('src', _.sample(content.data.icons, 1).toString());
 
       // if lose - grab three different icons
       } else {
         this.hasWon = false;
         $('.slots-container').removeClass('hasWon');
         $('.reveal-left').attr('src', _.sample(content.data.icons, 1).toString());
-        $('.reveal-middle').attr('src', _.sample(content.data.icons, 1).toString());
+        $('.reveal-center').attr('src', _.sample(content.data.icons, 1).toString());
         $('.reveal-right').attr('src', _.sample(content.data.icons, 1).toString());
       }
 
@@ -124,9 +121,10 @@ var Slots = Backbone.View.extend({
       }); // end Tween - slots spin animation
     
     }); // end Mobile button onClick()
-
-    
-    //  Desktop
+   
+    /**
+      * Desktop - Draggable Lever
+    */
     TweenMax.set('#lever', {y: -300, x: -40});
 
     // game logic and animations happen in onDragEnd()
@@ -165,8 +163,7 @@ var Slots = Backbone.View.extend({
 
           $('.slots-container').addClass('hasWon');
 
-          console.log(content.winningSrc);
-          $('.reveal').attr('src', content.winningSrc);
+          $('.reveal').attr('src', _.sample(content.data.icons, 1).toString());
 
         // if lose - grab three different icons
         } else {
@@ -174,7 +171,7 @@ var Slots = Backbone.View.extend({
           $('.slots-container').removeClass('hasWon');
 
           $('.reveal-left').attr('src', _.sample(content.data.icons, 1).toString());
-          $('.reveal-middle').attr('src', _.sample(content.data.icons, 1).toString());
+          $('.reveal-center').attr('src', _.sample(content.data.icons, 1).toString());
           $('.reveal-right').attr('src', _.sample(content.data.icons, 1).toString());
         }
 
@@ -202,7 +199,7 @@ var Slots = Backbone.View.extend({
                       setTimeout(function() { 
                         document.querySelector('#winner').play();
                         window.location.href = '#greeting';
-                      }, 750);                    
+                      }, 1000);                    
                     }
                   }, 0.25);
 

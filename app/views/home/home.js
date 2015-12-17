@@ -12,13 +12,21 @@ var Home = Backbone.View.extend({
 
   initialize: function() {
 
-    this.$el.html(template());
-
     this.listenTo(this.model, 'change:route', this.onRouteChange);
+
+    this.$el.html(template());
 
     this.animate = new AnimationController();
 
     $('.slots-container').removeClass('hasWon');
+
+    var content = {
+      data: this.model.get('data')
+    };
+
+    $('.reveal-left').attr('src', _.sample(content.data.icons, 1).toString());
+    $('.reveal-center').attr('src', _.sample(content.data.icons, 1).toString());
+    $('.reveal-right').attr('src', _.sample(content.data.icons, 1).toString());
 
   },
 
