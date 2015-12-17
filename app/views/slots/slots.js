@@ -28,11 +28,7 @@ var Slots = Backbone.View.extend({
   gameMechanics: function() {
 
     var content = {
-      data: this.model.get('data'),
-      winningSrc: _.sample(this.model.get('data').icons, 1),
-      losingSrc1: _.sample(this.model.get('data').icons, 1),
-      losingSrc2: _.sample(this.model.get('data').icons, 1),
-      losingSrc3: _.sample(this.model.get('data').icons, 1)
+      data: this.model.get('data')
     };
 
     // Mobile
@@ -61,15 +57,15 @@ var Slots = Backbone.View.extend({
 
         $('.slots-container').addClass('hasWon');
 
-        console.log(content.winningSrc);
-        $('.reveal').attr('src', content.winningSrc);
+        // console.log(content.winningSrc);
+        $('.reveal').attr('src', _.sample(content.data.icons, 1).toString());
 
       // if lose - grab three different icons
       } else {
         this.hasWon = false;
         $('.slots-container').removeClass('hasWon');
         $('.reveal-left').attr('src', _.sample(content.data.icons, 1).toString());
-        $('.reveal-middle').attr('src', _.sample(content.data.icons, 1).toString());
+        $('.reveal-center').attr('src', _.sample(content.data.icons, 1).toString());
         $('.reveal-right').attr('src', _.sample(content.data.icons, 1).toString());
       }
 
@@ -165,8 +161,8 @@ var Slots = Backbone.View.extend({
 
           $('.slots-container').addClass('hasWon');
 
-          console.log(content.winningSrc);
-          $('.reveal').attr('src', content.winningSrc);
+          // console.log(content.winningSrc);
+          $('.reveal').attr('src', _.sample(content.data.icons, 1).toString());
 
         // if lose - grab three different icons
         } else {
@@ -174,7 +170,7 @@ var Slots = Backbone.View.extend({
           $('.slots-container').removeClass('hasWon');
 
           $('.reveal-left').attr('src', _.sample(content.data.icons, 1).toString());
-          $('.reveal-middle').attr('src', _.sample(content.data.icons, 1).toString());
+          $('.reveal-center').attr('src', _.sample(content.data.icons, 1).toString());
           $('.reveal-right').attr('src', _.sample(content.data.icons, 1).toString());
         }
 
