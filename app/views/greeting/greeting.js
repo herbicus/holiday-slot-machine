@@ -50,8 +50,7 @@ var Greeting = Backbone.View.extend({
     document.querySelector('#theme').volume = 0.2;
     this.animate.animateIn(this.el);
     //this.animate.iconSpin('#mainIcon');
-
-    
+   
     if ( this.model.get('mobile') || this.model.get('tablet') ) {
       this.snowAmount = 500;
     } else {
@@ -66,7 +65,7 @@ var Greeting = Backbone.View.extend({
     tl.to('.l-greeting-section', 0.75, {top: 0, autoAlpha: 1, ease: Power4.easeOut}, 0.9);
     tl.to('#greeting img', 0.75, {top: 0, autoAlpha: 1, ease: Power3.easeOut}, 1);
     tl.to('#social-list', 0.75, {top: 0, autoAlpha: 1, ease: Power3.easeOut}, 1.15);
-    tl.to('.btn-play-again', 0.75, {top: 0, autoAlpha: 1, ease: Power3.easeOut}, 0.75);
+    tl.to('.btn-play-again', 0.75, {top: 0, autoAlpha: 1, ease: Power4.easeOut}, 0.85);
 
   },
 

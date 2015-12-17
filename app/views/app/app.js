@@ -50,11 +50,11 @@ var App = Backbone.View.extend({
       'images/rotate-device.jpg',
       'images/UpAnim.gif',
       'images/DownAnim.gif'
-    ]
+    ];
 
     for (var i = 0; i < this.manifest.length; i++) {
       this.loadImage(this.manifest[i]);
-    };
+    }
 
   },
 

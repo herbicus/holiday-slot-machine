@@ -31,7 +31,9 @@ var Slots = Backbone.View.extend({
       data: this.model.get('data')
     };
 
-    // Mobile
+    /**
+      * Mobile - Button
+    */
     $('#mobilePlay').on('click', function() {
       console.log('lever pulled');
       document.querySelector('#crank').play();
@@ -57,7 +59,6 @@ var Slots = Backbone.View.extend({
 
         $('.slots-container').addClass('hasWon');
 
-        // console.log(content.winningSrc);
         $('.reveal').attr('src', _.sample(content.data.icons, 1).toString());
 
       // if lose - grab three different icons
@@ -120,9 +121,10 @@ var Slots = Backbone.View.extend({
       }); // end Tween - slots spin animation
     
     }); // end Mobile button onClick()
-
-    
-    //  Desktop
+   
+    /**
+      * Desktop - Draggable Lever
+    */
     TweenMax.set('#lever', {y: -300, x: -40});
 
     // game logic and animations happen in onDragEnd()
@@ -161,7 +163,6 @@ var Slots = Backbone.View.extend({
 
           $('.slots-container').addClass('hasWon');
 
-          // console.log(content.winningSrc);
           $('.reveal').attr('src', _.sample(content.data.icons, 1).toString());
 
         // if lose - grab three different icons
@@ -198,7 +199,7 @@ var Slots = Backbone.View.extend({
                       setTimeout(function() { 
                         document.querySelector('#winner').play();
                         window.location.href = '#greeting';
-                      }, 750);                    
+                      }, 1000);                    
                     }
                   }, 0.25);
 
