@@ -6,7 +6,10 @@
   position absolute
   width 100%
   height 100%
-  background $siteGreen
+  background url(../images/card-bg-grey.jpg)no-repeat center center
+  -webkit-background-size cover 
+  -o-background-size cover 
+  background-size cover
   z-index 9999
   display none
 
@@ -14,21 +17,15 @@
     content ''
     z-index 9900
     background url("../images/rotate-device.jpg")no-repeat center center
-    -webkit-background-size cover
-    -o-background-size cover
-    background-size cover
+    -webkit-background-size contain
+    -o-background-size contain
+    background-size contain
     position fixed
     width 100%
     height 100%
 
   @media only screen and (max-device-width: 736px) and (orientation : landscape)
     display block
-    
-    &:before
-      background url("../images/rotate-tablet.png")no-repeat center center
-      -webkit-background-size contain
-      -o-background-size contain
-      background-size contain
       
 .outdated-overlay
   position fixed
